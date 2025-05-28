@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ClearwayDocument } from '../../shared/types/ClearwayDocument';
+import { ClearwayDocument } from '../../shared/types/clearway-document';
 
 @Injectable({
   providedIn: 'root',

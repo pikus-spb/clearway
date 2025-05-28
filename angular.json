@@ -28,6 +28,9 @@
                 "input": "public"
               }
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/app/main/styles/"]
+            },
             "styles": [
               "src/app/main/styles/styles.scss"
             ],
@@ -87,6 +90,9 @@
                 "input": "public"
               }
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/app/main/styles/"]
+            },
             "styles": [
               "src/app/main/styles/styles.scss"
             ],

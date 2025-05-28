@@ -1,0 +1,10 @@
+@use "vars" as *;
+
+.container {
+  border-radius: $default-border-radius;
+  margin: $default-margin;
+
+  img {
+    border: 1px solid #ccc;
+  }
+}

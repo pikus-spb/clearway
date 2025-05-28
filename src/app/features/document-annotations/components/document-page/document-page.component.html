@@ -1,0 +1,4 @@
+<fieldset class="container">
+  <img [src]="page().imageUrl" alt="Изображение страницы документа" clwZoomableImage/>
+  <clw-page-annotations [annotations]="page().annotations || [{number: 1, text: 'Annotation 1'}, {number: 2, text: 'Annotation 2'}]"></clw-page-annotations>
+</fieldset>

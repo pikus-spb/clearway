@@ -1,0 +1,12 @@
+@use 'vars' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: $default-margin;
+
+  h1, h2 {
+    text-align: center;
+  }
+}
+
