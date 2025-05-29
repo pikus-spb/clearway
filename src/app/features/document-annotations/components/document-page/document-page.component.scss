@@ -3,6 +3,9 @@
 .container {
   border-radius: $default-border-radius;
   margin: $default-margin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   img {
     border: 1px solid #ccc;
