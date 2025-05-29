@@ -9,8 +9,12 @@ import { ClearwayDocument } from '../../shared/types/clearway-document';
 export class DocumentApiService {
   private http = inject(HttpClient);
 
-  getDocument(id: string): Observable<ClearwayDocument> {
-    // Here always return 1.json but shoudl be real end-point
+  public loadDocument(id: string): Observable<ClearwayDocument> {
+    // Here always return 1.json but should be a real end-point
     return this.http.get<ClearwayDocument>(`/api/1.json`);
+  }
+
+  public saveDocument(doc: ClearwayDocument) {
+    console.log(doc);
   }
 }

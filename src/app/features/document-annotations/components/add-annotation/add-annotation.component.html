@@ -1,0 +1,6 @@
+<fieldset class="container">
+  <form [formGroup]="form" (submit)="addAnnotation()">
+    <textarea formControlName="annotation" placeholder="Добавить аннотацию" type="text"></textarea>
+    <button type="submit">Добавить</button>
+  </form>
+</fieldset>

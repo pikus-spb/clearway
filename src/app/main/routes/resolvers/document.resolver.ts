@@ -12,6 +12,6 @@ export class DocumentResolver implements Resolve<ClearwayDocument> {
 
   resolve(route: ActivatedRouteSnapshot): Observable<ClearwayDocument> {
     const documentId = route.params?.['id'];
-    return this.documentApiService.getDocument(documentId);
+    return this.documentApiService.loadDocument(documentId);
   }
 }

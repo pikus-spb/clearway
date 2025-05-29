@@ -1,0 +1,17 @@
+<div class="container">
+@if (doc(); as data) {
+
+  <h1>{{ data.name }}</h1>
+
+  @for (page of data.pages | sortPages; track page.number; let index = $index) {
+    <h2>Страница {{ page.number }}</h2>
+    <clw-document-page [page]="page" (pageChange)="changePage(index, $event)"></clw-document-page>
+  }
+
+  @if (hasChanges()) {
+    <button type="submit" (click)="saveDocument()">Сохранить изменения</button>
+  }
+} @else {
+  <h1>Документ не найден</h1>
+}
+</div>

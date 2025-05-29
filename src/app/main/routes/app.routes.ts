@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
-import { DocumentAnnotationsComponent } from '../../features/document-annotations/components/document-annotations/document-annotations.component';
+import { DocumentComponent } from '../../features/document-annotations/components/document/document.component';
 import { DocumentResolver } from './resolvers/document.resolver';
 
 export const routes: Routes = [
   {
     path: 'document/:id',
-    component: DocumentAnnotationsComponent,
+    component: DocumentComponent,
     resolve: {
       doc: DocumentResolver,
     },

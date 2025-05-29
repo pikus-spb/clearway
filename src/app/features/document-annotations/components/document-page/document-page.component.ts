@@ -1,15 +1,24 @@
-import { ChangeDetectionStrategy, Component, input, InputSignal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, model } from '@angular/core';
 import { ZoomableImageDirective } from '../../../../shared/directives/zoomable-image.directive';
-import { ClearwayDocumentPage } from '../../../../shared/types/clearway-document';
-import { PageAnnotationsComponent } from '../page-annotations/page-annotations.component';
+import {
+  ClearwayDocumentAnnotation,
+  ClearwayDocumentPage,
+} from '../../../../shared/types/clearway-document';
+import { AnnotationsComponent } from '../annotations/annotations.component';
 
 @Component({
   selector: 'clw-document-page',
-  imports: [PageAnnotationsComponent, ZoomableImageDirective],
+  imports: [AnnotationsComponent, ZoomableImageDirective],
   templateUrl: './document-page.component.html',
   styleUrl: './document-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DocumentPageComponent {
-  public page: InputSignal<ClearwayDocumentPage> = input.required();
+  public page = model<ClearwayDocumentPage>();
+
+  protected updateAnnotations(annotations: ClearwayDocumentAnnotation[]): void {
+    this.page.update(page => {
+      return Object.assign({}, page, { annotations });
+    });
+  }
 }
