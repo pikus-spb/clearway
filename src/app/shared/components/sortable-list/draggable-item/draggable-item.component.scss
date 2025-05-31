@@ -1,0 +1,11 @@
+@use "vars" as *;
+
+.container {
+  position: absolute;
+  background-color: #fff;
+  opacity: 0.4;
+  border: 1px solid #000;
+  white-space: nowrap;
+  max-width: $max-width-list;
+  pointer-events: none;
+}

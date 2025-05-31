@@ -1,15 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { ClearwayDocumentPage } from '../types/clearway-document';
 
 @Pipe({
-  name: 'sortPages',
+  name: 'sortArray',
 })
-export class SortPagesPipe implements PipeTransform {
-  transform(
-    pages: ClearwayDocumentPage[],
-    fieldName: keyof ClearwayDocumentPage = 'number',
-  ): ClearwayDocumentPage[] {
-    return [...pages].sort((a, b) => {
+export class SortArrayPipe<T> implements PipeTransform {
+  transform(pages: T[], fieldName: keyof T): T[] {
+    return pages.sort((a, b) => {
       if (typeof a[fieldName] === 'string') {
         return a[fieldName].localeCompare(b[fieldName] as string);
       }

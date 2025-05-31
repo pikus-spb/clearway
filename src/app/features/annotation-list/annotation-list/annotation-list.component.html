@@ -1,0 +1,7 @@
+<div class="container">
+  <clw-sortable-list
+    [items]="annotations()"
+    (itemsChange)="updateAnnotations($event)"
+  ></clw-sortable-list>
+  <clw-add-annotation (annotationAdd)="addAnnotation($event)"></clw-add-annotation>
+</div>

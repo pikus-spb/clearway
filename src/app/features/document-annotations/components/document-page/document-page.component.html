@@ -1,4 +1,0 @@
-<div class="container">
-  <img [src]="page()?.imageUrl" alt="Изображение страницы документа" clwZoomableImage/>
-  <clw-annotations [annotations]="page()?.annotations || []" (annotationsChange)="updateAnnotations($event)"></clw-annotations>
-</div>

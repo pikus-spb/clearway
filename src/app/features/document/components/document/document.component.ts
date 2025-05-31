@@ -11,13 +11,13 @@ import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs';
 import { DocumentApiService } from '../../../../main/services/document-api.service';
-import { SortPagesPipe } from '../../../../shared/pipes/sort-pages.pipe';
+import { SortArrayPipe } from '../../../../shared/pipes/sort-array.pipe';
 import { ClearwayDocumentPage } from '../../../../shared/types/clearway-document';
 import { DocumentPageComponent } from '../document-page/document-page.component';
 
 @Component({
-  selector: 'clw-annotations',
-  imports: [SortPagesPipe, DocumentPageComponent],
+  selector: 'clw-annotation-list',
+  imports: [DocumentPageComponent, SortArrayPipe],
   templateUrl: './document.component.html',
   styleUrl: './document.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

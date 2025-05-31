@@ -1,0 +1,19 @@
+@use "vars" as *;
+
+:host {
+  display: block;
+  width: 100%;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: $default-margin 2 * $default-margin;
+
+    ol {
+      width: 100%;
+      max-width: $max-width-list;
+    }
+  }
+}

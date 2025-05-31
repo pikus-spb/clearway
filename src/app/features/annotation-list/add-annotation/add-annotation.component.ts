@@ -1,4 +1,4 @@
-import { Component, inject, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
@@ -6,6 +6,7 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
   imports: [ReactiveFormsModule],
   templateUrl: './add-annotation.component.html',
   styleUrl: './add-annotation.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AddAnnotationComponent {
   public annotationAdd = output<string>();

@@ -1,0 +1,15 @@
+@use "vars" as *;
+
+.container {
+  div {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    span.control {
+      color: $warning-color;
+    }
+  }
+}

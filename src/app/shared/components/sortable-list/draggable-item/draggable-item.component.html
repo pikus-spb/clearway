@@ -1,0 +1,5 @@
+@if (item() !== null) {
+  <div class="container" [style.left.px]="getMouseX()" [style.top.px]="getMouseY()">
+    {{ item()?.text }}
+  </div>
+}

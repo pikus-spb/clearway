@@ -1,0 +1,13 @@
+<li class="container">
+  <div>
+    <span (mousedown)="mouseDown($event)">{{ item().text }}</span>
+    <span
+      tabindex="0"
+      title="Удалить элемент"
+      class="control"
+      (click)="itemRemoved.emit(item().number)"
+      (keydown.enter)="itemRemoved.emit(item().number)"
+      >[X]</span
+    >
+  </div>
+</li>
