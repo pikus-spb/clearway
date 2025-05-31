@@ -1,7 +1,6 @@
-import { NumberedTextItem } from './numbered-text-item';
+import { NumberedItem, NumberedTextItem } from './numbered-text-item';
 
-export interface ClearwayDocumentPage {
-  number: number;
+export interface ClearwayDocumentPage extends NumberedItem {
   imageUrl: string;
   annotations?: NumberedTextItem[];
 }
