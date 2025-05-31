@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, model } from '@angular/core';
 import { ZoomableImageDirective } from '../../../../shared/directives/zoomable-image.directive';
-import { ClearwayDocumentPage } from '../../../../shared/types/clearway-document';
-import { NumberedTextItem } from '../../../../shared/types/numbered-text-item';
+import { DocumentPage } from '../../../../shared/types/document';
+import { NumberedTextItem } from '../../../../shared/types/item';
 import { AnnotationListComponent } from '../../../annotation-list/annotation-list/annotation-list.component';
 
 @Component({
@@ -12,7 +12,7 @@ import { AnnotationListComponent } from '../../../annotation-list/annotation-lis
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DocumentPageComponent {
-  public page = model<ClearwayDocumentPage>();
+  public page = model<DocumentPage>();
 
   protected updateAnnotations(annotations: NumberedTextItem[]): void {
     this.page.update(page => {

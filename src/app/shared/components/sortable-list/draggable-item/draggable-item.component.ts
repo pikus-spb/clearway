@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, input, linkedSignal } from '@angular/core';
-import { NumberedTextItem } from '../../../types/numbered-text-item';
+import { NumberedTextItem } from '../../../types/item';
 import { Position } from '../../../types/position';
 
 @Component({

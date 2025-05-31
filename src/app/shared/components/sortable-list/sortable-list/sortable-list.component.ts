@@ -9,7 +9,7 @@ import {
   WritableSignal,
 } from '@angular/core';
 
-import { NumberedTextItem } from '../../../types/numbered-text-item';
+import { NumberedTextItem } from '../../../types/item';
 import { Position } from '../../../types/position';
 import { DraggableItemComponent } from '../draggable-item/draggable-item.component';
 import { ListItemComponent } from '../list-item/list-item.component';

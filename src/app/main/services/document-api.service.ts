@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ClearwayDocument } from '../../shared/types/clearway-document';
+import { Document } from '../../shared/types/document';
 
 @Injectable({
   providedIn: 'root',
@@ -9,12 +9,12 @@ import { ClearwayDocument } from '../../shared/types/clearway-document';
 export class DocumentApiService {
   private http = inject(HttpClient);
 
-  public loadDocument(id: string): Observable<ClearwayDocument> {
+  public loadDocument(id: string): Observable<Document> {
     // Here always return 1.json but should be a real end-point
-    return this.http.get<ClearwayDocument>(`/api/1.json`);
+    return this.http.get<Document>(`/api/1.json`);
   }
 
-  public saveDocument(doc: ClearwayDocument) {
+  public saveDocument(doc: Document) {
     console.log(doc);
   }
 }

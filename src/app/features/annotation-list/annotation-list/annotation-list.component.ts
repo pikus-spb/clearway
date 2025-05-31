@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, model, ModelSignal } from '@angular/core';
 import { SortableListComponent } from '../../../shared/components/sortable-list/sortable-list/sortable-list.component';
-import { NumberedTextItem } from '../../../shared/types/numbered-text-item';
+import { NumberedTextItem } from '../../../shared/types/item';
 import { AddAnnotationComponent } from '../add-annotation/add-annotation.component';
 
 @Component({

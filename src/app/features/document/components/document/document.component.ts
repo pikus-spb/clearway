@@ -12,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs';
 import { DocumentApiService } from '../../../../main/services/document-api.service';
 import { SortArrayPipe } from '../../../../shared/pipes/sort-array.pipe';
-import { ClearwayDocumentPage } from '../../../../shared/types/clearway-document';
+import { DocumentPage } from '../../../../shared/types/document';
 import { DocumentPageComponent } from '../document-page/document-page.component';
 
 @Component({
@@ -35,7 +35,7 @@ export class DocumentComponent {
     });
   }
 
-  protected changePage(index: number, page?: ClearwayDocumentPage) {
+  protected changePage(index: number, page?: DocumentPage) {
     this.doc.update(doc => {
       doc.pages[index] = page;
       return doc;

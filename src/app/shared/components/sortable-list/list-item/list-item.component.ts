@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
-import { NumberedTextItem } from '../../../types/numbered-text-item';
+import { NumberedTextItem } from '../../../types/item';
 
 @Component({
   selector: 'clw-list-item',
